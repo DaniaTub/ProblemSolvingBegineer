@@ -5,23 +5,28 @@ package com.Dania.question;
 // You want to know how many of the stones you have are also jewels.
 public class Eleven {
     public int numJewelsInStones(String jewels, String stones) {
-        int count = 0;
-        char[] arrone = jewels.toCharArray();
-        char[] arrtwo = stones.toCharArray();
 
-        for (int i = 0; i < arrone.length; ) {
-            for (int j = 0; j < arrtwo.length; j++) {
-                if (arrone[i] == arrtwo[j]) {
-                    count++;
-                    i++;
+
+            int count = 0;
+            char[] arrone = jewels.toCharArray();
+            char[] arrtwo = stones.toCharArray();
+
+            for (int i = 0; i < arrone.length; ) {
+                for (int j = 0; j < arrtwo.length; j++) {
+                    if (arrone[i] == arrtwo[j]) {
+                        count++;
+
+                    }
+
                 }
+                i++;
+
             }
+            return count;
+
         }
-        return count;
-
-
     }
-}
+
 
 
 
